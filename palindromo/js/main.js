@@ -4,6 +4,8 @@
 // qui sicuramente da cercare ci sarà il come revertare una parola.
 
 var msg;
+var accaUno = document.getElementById('pali')
+
 
 function palindrome(word) {
   function reverse(word) {
@@ -20,4 +22,5 @@ function palindrome(word) {
 parola = prompt("Scrivi una parola")
 parolaCapovolta = palindrome(parola)
 
-console.log('La parola capovolta è ' + parolaCapovolta + '. ' + msg)
+
+accaUno.innerHTML = 'La parola capovolta è ' + parolaCapovolta + '. ' + msg
