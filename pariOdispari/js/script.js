@@ -6,6 +6,8 @@
 // Dichiaro variabili
 
 var winner, computerNumberOne, randomChoice1, randomChoice2, computerNumberTwo, computerChoiceOne, computerChoiceTwo, sum;
+
+//seleziono bottone dall'html
 var button = document.getElementsByClassName('btn');
 
 
@@ -27,6 +29,7 @@ function pariDispari() {
   }
   return randomChoice;
 }
+
 
 function game() {
   //chiamo la funzione per generare il pari o dispari
