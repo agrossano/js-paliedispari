@@ -63,4 +63,5 @@ main div {
 .btn:active {
   outline: 0 dashed #009688;
   outline-offset: 20px;
+  color: red;
 }
