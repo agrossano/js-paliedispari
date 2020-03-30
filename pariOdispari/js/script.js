@@ -6,6 +6,7 @@
 // Dichiaro variabili
 
 var winner, computerNumberOne, randomChoice1, randomChoice2, computerNumberTwo, computerChoiceOne, computerChoiceTwo, sum;
+var button = document.getElementsByClassName('btn');
 
 
 // funzione che genera un numero casuale
@@ -42,19 +43,24 @@ function game() {
   } else {
     result = "Dispari"
   }
-  console.log('ha vinto ' + result)
   //determino il vincitore del gioco
   if (result === "Pari" && computerChoiceOne === "Pari" || result === "Dispari" && computerChoiceOne === "Dispari") {
     winner = 'Computer 1 ha vinto';
   } else if (result === "Pari" && computerChoiceTwo === "Pari" || result === "Dispari" && computerChoiceTwo === "Dispari") {
     winner = 'Computer 2 ha vinto';
   }
+  document.getElementById('sceltaUno').innerHTML = 'Computer Uno ha scelto ' + computerChoiceOne + ' e il numero ' + computerNumberOne;
+  document.getElementById('sceltaDue').innerHTML = 'Computer Due ha scelto ' + computerChoiceTwo + ' e il numero ' + computerNumberTwo;
+  document.getElementById('winner').innerHTML = winner;
   return winner;
 }
 
+//lancio il gioco all'avvio
+vincitore = game();
 
-vincitore = game()
+//lancio il gioco al click del bottone
+button[0].addEventListener('click', function () {
+  game();
+})
 
-document.getElementById('sceltaUno').innerHTML = 'Computer Uno ha scelto ' + computerChoiceOne + ' e il numero ' + computerNumberOne;
-document.getElementById('sceltaDue').innerHTML = 'Computer Due ha scelto ' + computerChoiceTwo + ' e il numero ' + computerNumberTwo;
-document.getElementById('winner').innerHTML = vincitore;
+
